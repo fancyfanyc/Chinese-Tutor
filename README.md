@@ -1,20 +1,68 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Hanzi Master - AI Chinese Tutor
 
-# Run and deploy your AI Studio app
+An AI-powered Chinese character learning application that helps users practice writing Chinese characters with proper stroke order guidance.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/1VKREAijT8EWpP6TMwy86zawToN4I03hR
+- Interactive Chinese character writing canvas
+- AI-powered stroke order verification
+- Character information and usage examples
+- Modern, responsive design
 
-## Run Locally
+## Tech Stack
 
-**Prerequisites:**  Node.js
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- Google Gemini API
+- Hanzi Writer
 
+## Installation
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a `.env.local` file with your Gemini API key:
+   ```
+   GEMINI_API_KEY=your-api-key-here
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## Build
+
+```bash
+npm run build
+```
+
+## Deployment
+
+This project is configured for deployment on Netlify:
+
+1. Push the code to a GitHub repository
+2. Connect the repository to Netlify
+3. Set the environment variable `GEMINI_API_KEY` in Netlify settings
+4. Netlify will automatically build and deploy the application
+
+## Configuration Changes
+
+### Tailwind CSS Setup
+
+The project has been configured to use Tailwind CSS as a PostCSS plugin instead of the CDN version:
+
+- Created `tailwind.config.js` with custom theme configuration
+- Created `postcss.config.js` for PostCSS setup
+- Added `index.css` with Tailwind directives
+- Updated `package.json` with necessary dependencies
+- Removed CDN script from `index.html`
+
+This ensures optimal performance and production readiness.
+
+## License
+
+MIT
